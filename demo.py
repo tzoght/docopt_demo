@@ -2,6 +2,7 @@
 # date: 2020-01-15
 # log: 
 #     2022-10-19: tzoght added optional argument 
+#     2022-10-19: tzoght added main function
 
 """This script prints out docopt args.
 Usage: demo.py <arg1> --arg2=<arg2> [--arg3=<arg3>] [<arg4>] 
@@ -15,5 +16,11 @@ Options:
 
 from docopt import docopt
 opt = docopt(__doc__)
-print(opt)
-print(type(opt))
+
+def main(opt):
+   print(opt)
+   print(type(opt))
+    
+if __name__ == "__main__":
+   main(opt)
+
