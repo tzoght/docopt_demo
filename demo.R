@@ -2,6 +2,7 @@
 # date: 2020-01-15
 # log: 
 #     2022-10-19: tzoght added a new positional argument argv4
+#     2022-10-19: tzoght added a main function
 
 "This script prints out docopt args.
 Usage: demo.R <arg1> --arg2=<arg2> [--arg3=<arg3>] [<arg4>]
@@ -15,7 +16,11 @@ Options:
 
 library(docopt)
 opt <- docopt(doc)
-print(opt)
-print(typeof(opt))
+main <- function(opt){
+  print(opt)
+  print(typeof(opt))
+}
+
+main(opt)
 
 
